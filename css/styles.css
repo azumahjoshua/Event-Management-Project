@@ -6,14 +6,18 @@
 
 body {
     margin: 0px;
-    font-family: 'segoe ui';
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;  
+    height: 100vh;  
 }
 /* Nav bar Css starts */
 .nav {
     height: 50px;
     width: 100%;
-    background-color: #4d4d4d;
-    position: relative;
+    /* background-color: #4d4d4d; */
+    position: fixed;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav>.nav-header {
@@ -53,7 +57,10 @@ body {
 }
 
 @media (max-width:600px) {
-
+    .nav {
+        position: fixed;
+        top: 0;
+    }
     .nav>.nav-btn {
         display: inline-block;
         position: absolute;
@@ -113,23 +120,27 @@ body {
     justify-content: center;
     align-items: center;
 }
-.header-image img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 25%;
-        margin-bottom: auto;
-        width: 45vw;
-    }
-.header-text h1 {
+.header-text {
     /* margin: 1em auto; */
-    margin-top: 25%;
-    text-align: center;
-    font-size: 48px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: 220px;
+    color: white;
+    width: 35vw;
+}
+.header-text h1{
+    font-size: 58px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 5px;
 }
 .header-text p {
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 @media (max-width: 768px){
     .container {
         display: block;
@@ -143,3 +154,31 @@ body {
     }
 }
 /* Home page css ends */
+/* Button start */
+.button-2 {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 35px;
+}
+.button-2 .button-28{
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.button-2 .button-28:hover {
+    background-color: black;
+    color: white;
+}
+button a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* Button ends */

@@ -32,14 +32,18 @@
         </div>
     </div>
     <div class="container">
-        <div class="header-image">
-            <img src="./images/logo.jpeg" alt="student-wih a book">
-        </div>
+        <!-- <div class="header-image"> -->
+        <!-- <img src="./images/logo.jpeg" alt="student-wih a book"> -->
+        <!-- </div> -->
         <div class="header-text">
             <h1> SIST Student Union</h1>
+            <hr />
             <p>Welcome to SIST student Union portal where you can create events and more ...</p>
-            <p>Do you have an account </p> <button>Register Here</button>
-            <button> Login </button>
+            <p>Do you have an account </p>
+            <div class="button-2">
+                <button class="button-28"><a href="./register.php">Register Here </a></button>
+                <button class="button-28"> <a href="./login.php">Log in</a> </button>
+            </div>
         </div>
     </div>
     <script src="./script/app.js"></script>
