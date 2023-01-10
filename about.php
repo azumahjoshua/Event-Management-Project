@@ -1,7 +1,7 @@
 <?php
 include_once './header.php'
 ?>
-<section>
+<section class="about-section">
     <h1>About page</h1>
 </section>
 <?php

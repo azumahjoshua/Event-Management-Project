@@ -1,7 +1,7 @@
 <?php
 include_once './header.php';
 ?>
-<section class="container">
+<section class="index-container">
     <div class="content">
         <h1> SIST Student Union </h1>
         <p>Welcome to SIST student Union portal <br> where you can create events and
