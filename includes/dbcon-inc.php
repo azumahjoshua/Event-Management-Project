@@ -1,10 +1,10 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = " ";
-$dbname = 'studentportal';
+$password = "";
+$dbname = 'siststudentportal';
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
 // Check connection
