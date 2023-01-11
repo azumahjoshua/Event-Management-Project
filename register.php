@@ -29,12 +29,12 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="firstname" id="firstname-label">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" class="input-text" placeholder="First Name">
+                    <input type="text" id="firstname" name="firstname" class="input-text" placeholder="First Name" required>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="lastname" id="lastname-label">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" class="input-text" placeholder="Last Name">
+                    <input type="text" id="lastname" name="lastname" class="input-text" placeholder="Last Name" required>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="address1" id="address1-label">Address 1:</label>
-                    <input type="text" id="address1" name="address1" class="input-text" placeholder="Enter your Address 1">
+                    <input type="text" id="address1" name="address1" class="input-text" placeholder="Enter your Address 1" required>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -59,7 +59,7 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="post-code" id="post-code-label">Post Code:</label>
-                    <input type="text" id="post-code" name="postcode" class="input-text" placeholder="Enter your post-code">
+                    <input type="text" id="post-code" name="postcode" class="input-text" placeholder="Enter your post-code" required>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -68,17 +68,17 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="email" id="email-label">Email:</label>
-                    <input type="email" id="email" class="input-text" name="email" placeholder="Enter your email">
+                    <input type="email" id="email" class="input-text" name="email" placeholder="Enter your email" required>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="phone" id="phone-label">Enter a phone number:</label>
-                    <input type="tel" id="phone" class="input-text" name="telephone" placeholder="+123-456-789-789">
+                    <input type="tel" id="phone" class="input-text" name="telephone" placeholder="+123-456-789-789" required>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="profile" id="profile-label">Profile Url:</label>
-                    <input type="text" id="profile_url" class="input-text" name="profile_url" placeholder="Enter your profile Url">
+                    <input type="text" id="profile_url" class="input-text" name="profile_url" placeholder="Enter your profile Url" required>
                     <small>Error message</small>
                 </div>
             </div>
