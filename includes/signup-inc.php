@@ -1,7 +1,9 @@
 <?php
-if (isset($_POST['submit'])) {
+require './dbcon-inc.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    echo 'Workings';
+    // print_r($_POST);
+    // echo 'Workings';
 } else {
-    header('location : ../register.php');
+    header('Location : ../register.php');
 }

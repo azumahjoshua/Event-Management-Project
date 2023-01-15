@@ -1,5 +1,6 @@
 <?php
-include_once './header.php'
+include_once './header.php';
+// print_r($_POST);
 ?>
 <section class="register-section">
     <div class="registeration-form">
@@ -10,7 +11,6 @@ include_once './header.php'
                     <label for="username" id="name-label">Username:</label>
                     <input type="text" id="username" name="username" class="input-text" placeholder="Enter your  user name">
                     <small>Error message</small>
-
                 </div>
                 <div class="form-group">
                     <label for="password" id="password-label">Password:</label>
@@ -29,12 +29,12 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="firstname" id="firstname-label">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" class="input-text" placeholder="First Name" required>
+                    <input type="text" id="firstname" name="firstname" class="input-text" placeholder="First Name">
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="lastname" id="lastname-label">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" class="input-text" placeholder="Last Name" required>
+                    <input type="text" id="lastname" name="lastname" class="input-text" placeholder="Last Name">
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -50,7 +50,7 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="address1" id="address1-label">Address 1:</label>
-                    <input type="text" id="address1" name="address1" class="input-text" placeholder="Enter your Address 1" required>
+                    <input type="text" id="address1" name="address1" class="input-text" placeholder="Enter your Address 1" >
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -59,7 +59,7 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="post-code" id="post-code-label">Post Code:</label>
-                    <input type="text" id="post-code" name="postcode" class="input-text" placeholder="Enter your post-code" required>
+                    <input type="text" id="post-code" name="postcode" class="input-text" placeholder="Enter your post-code" >
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -68,22 +68,22 @@ include_once './header.php'
                 </div>
                 <div class="form-group">
                     <label for="email" id="email-label">Email:</label>
-                    <input type="email" id="email" class="input-text" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" class="input-text" name="email" placeholder="Enter your email" >
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="phone" id="phone-label">Enter a phone number:</label>
-                    <input type="tel" id="phone" class="input-text" name="telephone" placeholder="+123-456-789-789" required>
+                    <input type="tel" id="phone" class="input-text" name="telephone" placeholder="+123-456-789-789" >
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="profile" id="profile-label">Profile Url:</label>
-                    <input type="text" id="profile_url" class="input-text" name="profile_url" placeholder="Enter your profile Url" required>
+                    <input type="text" id="profile_url" class="input-text" name="profile_url" placeholder="Enter your profile Url" >
                     <small>Error message</small>
                 </div>
             </div>
             <div class="form-submit-btn">
-                <input type="submit" name="submit" id="submit" value="Register">
+                <button type="submit" name="submit" id="submit-form" value="Register">Register here</button>
             </div>
         </form>
     </div>
