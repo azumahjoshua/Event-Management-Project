@@ -16,17 +16,18 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const passwordrepeat = document.getElementById("repeat-password");
 const title = document.getElementById("title");
-// const gender  = document.querySelector('dropdown')
+const gender = document.querySelector("dropdown");
 const lastname = document.getElementById("lastname");
 const firstname = document.getElementById("firstname");
-// const address1 = document.getElementById('address1')
-// const address2 = document.getElementById('address2')
+const address1 = document.getElementById("address1");
+const address2 = document.getElementById("address2");
+const address3 = document.getElementById("address3");
 const post_code = document.getElementById("post-code");
-// const description = document.getElementById('description')
+const description = document.getElementById("description");
 const email = document.getElementById("email");
 const telephone = document.getElementById("phone");
 const sub = document.getElementById("submit");
-// const profile_url = document.getElementById('profile_url')
+const profile_url = document.getElementById("profile_url");
 //
 form.addEventListener("submit", (event) => {
 	let valid = validateInputs();
@@ -38,21 +39,74 @@ form.addEventListener("submit", (event) => {
 function validateInputs() {
 	if (
 		!(
-			validateEmail() ||
-			validateFirstName() ||
-			validateLastName() ||
-			validatePostCode() ||
-			validateTitle() ||
-			validateReapeatedPassword() ||
-			validateUserName() ||
-			validatePassword()
+			validateUserName() &&
+			validatePassword() &&
+			validateReapeatedPassword() &&
+			validateTitle() &&
+			validateFirstName() &&
+			validateLastName() &&
+			validatePostCode() &&
+			validateEmail() &&
+			validateAddress1() &&
+			validateAddress2() &&
+			validateAddress3() &&
+			validatedescription() &&
+			phonenumber() &&
+			validateprofileUrl()
 		)
 	) {
 		return false;
 	}
 	return true;
 }
-
+// description should not be empty
+function validatedescription() {
+	if (description.value.trim() === "") {
+		errorMessage(description, "Description can not be empty");
+		return false;
+	} else {
+		successMessage(description);
+		return true;
+	}
+}
+// validateAddress1
+function validateAddress1() {
+	if (address1.value.trim() === "") {
+		errorMessage(address1, "Address 1 Can not be empty");
+		return false;
+	} else {
+		successMessage(lastname);
+		return true;
+	}
+}
+// validateAddress2
+function validateAddress2() {
+	if (address2.value.trim() === "") {
+		errorMessage(address2, "Address 2 Can not be empty");
+		return false;
+	} else {
+		successMessage(address2);
+		return true;
+	}
+}
+function validateAddress3() {
+	if (address3.value.trim() === "") {
+		errorMessage(address3, "Address 3 Can not be empty");
+		return false;
+	} else {
+		successMessage(address3);
+		return true;
+	}
+}
+function validatedescription() {
+	if (description.value.trim() === "") {
+		errorMessage(description, "description  Can not be empty");
+		return false;
+	} else {
+		successMessage(description);
+		return true;
+	}
+}
 // Validate Postal Code
 function validatePostCode() {
 	if (isUSAZipCode(post_code.value)) {
@@ -128,6 +182,8 @@ function validateUserName() {
 	if (username.value.trim() === "") {
 		errorMessage(username, "Username cannot be blank");
 		return false;
+	} else if (!isNaN(username.value)) {
+		errorMessage(username, "Username cannot be numbers");
 	} else {
 		successMessage(username);
 		return true;
@@ -175,18 +231,47 @@ function isUSAZipCode(str) {
 	return /^\d{5}(-\d{4})?$/.test(str);
 }
 
-function phonenumber(inputtxt) {
+function phonenumber() {
 	/*
   +XX-XXX-XXX-XXX
   +XX.XXX.XXX-XXX
   +XX XXX XXX XXX
   */
-	let phoneno =
-		/^\+?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
-	if (!inputtxt.value.match(phoneno)) {
-		errorMessage(passwordrepeat, "Phone number should be [+ 123 456 678 912]");
+	// let phoneno =
+	// /^\+?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/;
+	let phoneno = /^[0-9]{10}$/;
+	if (telephone.value == "") {
+		errorMessage(telephone, "Phone number should not be blank [0123456789]");
+		return false;
+	} else if (!telephone.value.match(phoneno)) {
+		errorMessage(telephone, "Phone number should be of the form [0123456789]");
 		return false;
 	}
-
-	return false;
+	successMessage(telephone);
+	return true;
+}
+// Validate profile Url
+function validateprofileUrl() {
+	if (profile_url.value == "") {
+		errorMessage(profile_url, " Profile url should not be  blank");
+		return false;
+	}
+	let urlvalue = isValidUrl(profile_url.value);
+	if (!urlvalue) {
+		errorMessage(profile_url, "Not a valid url");
+		return false;
+	} else {
+		successMessage(profile_url);
+		return true;
+	}
+}
+// https://codingbeautydev.com/blog/javascript-check-if-string-is-url/
+// check if the url is valid
+function isValidUrl(string) {
+	try {
+		new URL(string);
+		return true;
+	} catch (err) {
+		return false;
+	}
 }

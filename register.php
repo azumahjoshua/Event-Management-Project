@@ -56,6 +56,12 @@ include_once './header.php';
                 <div class="form-group">
                     <label for="address2" id="address2-label">Address 2:</label>
                     <input type="text" id="address2" name="address2" class="input-text" placeholder="Enter your Address 2">
+                    <small>Error message</small>
+                </div>
+                <div class="form-group">
+                    <label for="address3" id="address3-label">Address 3:</label>
+                    <input type="text" id="address3" name="address3" class="input-text" placeholder="Enter your Address 3">
+                    <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="post-code" id="post-code-label">Post Code:</label>
@@ -65,6 +71,7 @@ include_once './header.php';
                 <div class="form-group">
                     <label for="description" id="description-label">Description:</label>
                     <textarea style="height:50px;resize:vertical;" id="description" name="description" rows="2" cols="80"></textarea>
+                    <small>Error message</small>
                 </div>
                 <div class="form-group">
                     <label for="email" id="email-label">Email:</label>
@@ -83,7 +90,7 @@ include_once './header.php';
                 </div>
             </div>
             <div class="form-submit-btn">
-                <button type="submit" name="submit" id="submit-form" value="Register">Register here</button>
+                <input type="submit" name="submit" id="submit-form" value="Register" placeholder="Register"/>
             </div>
         </form>
     </div>
