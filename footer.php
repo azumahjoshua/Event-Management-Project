@@ -1,3 +1,3 @@
-<script src="./script/app.js"></script>
+<script type="text/javascript" src="./script/app.js"></script>
 </body>
 </html>

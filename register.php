@@ -6,6 +6,13 @@ include_once './header.php';
     <div class="registeration-form">
         <h1 class="form-title">Registration From</h1>
         <form id="form-registeration" action="./includes/signup-inc.php" method="post">
+            <?php if (isset($_GET['error'])) { ?>
+            <p class="error"><?php echo $_GET['error']; ?></p>
+            <?php } ?>
+            <?php if (isset($_GET['success'])) { ?>
+            <p class="success"><?php echo $_GET['success']; ?></p>
+          <?php } ?>
+
             <div class="input-text-box">
                 <div class="form-group">
                     <label for="username" id="name-label">Username:</label>
@@ -19,7 +26,7 @@ include_once './header.php';
                 </div>
                 <div class="form-group">
                     <label for="repeat-password" id="password-label"> Confirm Password:</label>
-                    <input type="password" id="repeat-password" name="password" class="input-text" placeholder="Repeat your password">
+                    <input type="password" id="repeat_password" name="repeat_password" class="input-text" placeholder="Repeat your password">
                     <small>Error message</small>
                 </div>
                 <div class="form-group">
@@ -70,7 +77,7 @@ include_once './header.php';
                 </div>
                 <div class="form-group">
                     <label for="description" id="description-label">Description:</label>
-                    <textarea style="height:50px;resize:vertical;" id="description" name="description" rows="2" cols="80"></textarea>
+                    <textarea style="height:50px;resize:vertical;" id="description" name="described" rows="2" cols="80"></textarea>
                     <small>Error message</small>
                 </div>
                 <div class="form-group">

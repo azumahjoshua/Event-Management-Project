@@ -14,7 +14,7 @@ const form = document.getElementById("form-registeration");
 // console.log(form)
 const username = document.getElementById("username");
 const password = document.getElementById("password");
-const passwordrepeat = document.getElementById("repeat-password");
+const passwordrepeat = document.getElementById("repeat_password");
 const title = document.getElementById("title");
 const gender = document.querySelector("dropdown");
 const lastname = document.getElementById("lastname");

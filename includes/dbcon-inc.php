@@ -1,13 +1,16 @@
 <?php
-require './config.php';
-function connect($host, $db, $user, $password) {
-    $dsn = "mysql:host=$host;dbname=$db;charset=UTF8";
-    try {
-		$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
-		return new PDO($dsn, $user, $password, $options);
-	} catch (PDOException $e) {
-		die($e->getMessage());
-	}
-}
-return connect($host, $db, $user, $password);
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = 'siststudentportal';
 // Create connection
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  return $conn;
+//   echo "Connected successfully";
+} catch(PDOException $e) {
+     echo "Can not connect to data base";
+  echo "Connection failed: " . $e->getMessage();
+}
