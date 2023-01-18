@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+// session_start(); 
 $pdo = include_once './dbcon-inc.php';
     if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Server side data Validation

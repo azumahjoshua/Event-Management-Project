@@ -8,10 +8,8 @@ hamburger.addEventListener("click", () => {
 });
 
 /* Toggle Menu  Ends */
-
 /* Form Validation */
-const form = document.getElementById("form-registeration");
-// console.log(form)
+// console.log(form);
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const passwordrepeat = document.getElementById("repeat_password");
@@ -29,13 +27,17 @@ const telephone = document.getElementById("phone");
 const sub = document.getElementById("submit");
 const profile_url = document.getElementById("profile_url");
 //
-form.addEventListener("submit", (event) => {
-	let valid = validateInputs();
-	if (!valid) {
-		event.preventDefault();
-	}
-});
 
+const form = document.querySelector("form");
+if (form) {
+	form.addEventListener("submit", (event) => {
+		let valid = validateInputs();
+		if (!valid) {
+			event.preventDefault();
+		}
+	});
+}
+// });
 function validateInputs() {
 	if (
 		!(
@@ -275,3 +277,16 @@ function isValidUrl(string) {
 		return false;
 	}
 }
+// Change Navbar color on scroll
+function scrollChange() {
+	let navbar = document.querySelector("nav");
+	// console.log(navbar);
+	let scrollY = window.scrollY;
+	if (scrollY < 200) {
+		navbar.classList.remove("BgColour");
+	} else {
+		navbar.classList.add("BgColour");
+	}
+	// console.log(navbar);
+}
+window.addEventListener("scroll", scrollChange);

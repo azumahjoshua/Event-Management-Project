@@ -5,7 +5,7 @@ include_once './header.php';
 <section class="register-section">
     <div class="registeration-form">
         <h1 class="form-title">Registration From</h1>
-        <form id="form-registeration" action="./includes/signup-inc.php" method="post">
+        <form class="form-registeration" action="./includes/signup-inc.php" method="post">
             <?php if (isset($_GET['error'])) { ?>
             <p class="error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
