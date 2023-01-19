@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +26,20 @@
                 <li class="nav-items"> <a href="./about.php"> <span>About</span></a> </li>
                 <li class="nav-items"> <a href="./register.php"> <span> Register</span> </a> </li>
                 <li class="nav-items"> <a href="./login.php"> <span> Log in </span></a> </li>
+                <?php
+                $event = '<a href="./eventpage.php"> <span> Event </span></a> </li>';
+                if(isset($_SESSION['username'])){
+                echo "<li class='nav-items'>".$event;
+                echo "</li>";
+                }
+                ?>
+                <?php
+                $logout = '<a href="./logout.php"> <span> Logout </span></a> </li>';
+                if(isset($_SESSION['username'])){
+                echo "<li class='nav-items'>".$logout;
+                echo "</li>";
+                    }
+                    ?>
             </ul>
             <div class="icon" id="togglenava">
                 <i class="fa fa-bars"></i>

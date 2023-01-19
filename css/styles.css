@@ -476,7 +476,8 @@ button:hover {
 }
 
 /* registeration page styling */
-.register-section {
+.register-section,
+.event-add-section {
 	display: flex;
 	height: 100vh;
 	justify-content: center;
@@ -492,7 +493,8 @@ button:hover {
 	/* z-index: -9000; */
 	/* background-color: #009688; */
 }
-.registeration-form {
+.registeration-form,
+.event-form {
 	width: 100%;
 	max-width: 650px;
 	padding: 28px;
@@ -586,17 +588,20 @@ button:hover {
 	color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 600px) {
-	.register-section {
+	.register-section,
+	.event-add-section {
 		display: flex;
 		height: 100vh;
 		justify-content: center;
 		align-items: center;
 		color: #ffff;
 	}
-	.register-section {
+	.register-section,
+	.event-add-section {
 		min-width: 280px;
 	}
-	.registeration-form {
+	.registeration-form,
+	.event-form {
 		/* height: 100v; */
 		margin-top: 181px;
 	}
@@ -611,6 +616,14 @@ button:hover {
 		max-height: 520px;
 		overflow: auto;
 	}
+}
+#dropdown {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 /* registeration page styling */
 
@@ -641,3 +654,33 @@ button:hover {
 	/* margin-top: 63px; */
 }
 /* Log in */
+
+/* Event page */
+.event-hero {
+	color: white;
+	background-image: url("../images/img2.jpg");
+	position: relative;
+	height: 40vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.5;
+}
+.event-hero .event-hero-content {
+	text-align: center;
+	width: 60%;
+}
+/* .hero-content h1 { */
+/* font-size: 4rem; */
+/* animation: showup 7s; */
+/* animation: slidein 7s infinite; */
+/* animation: reveal 7s infinite; */
+/* } */
+.event-hero-content h1 {
+	font-size: 4rem;
+	animation: showup 7s infinite;
+	/* animation: slidein 7s infinite; */
+	/* animation: reveal 7s infinite; */
+}
+
+/* Add Event Section  */

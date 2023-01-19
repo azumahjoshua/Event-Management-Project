@@ -1,3 +1,3 @@
-<script type="text/javascript" src="./script/app.js"></script>
+<script type="module" src="./script/main.js"></script>
 </body>
 </html>

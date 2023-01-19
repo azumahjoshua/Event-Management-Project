@@ -1,4 +1,5 @@
 <?php
+// 
 session_start();
 $pdo = include_once './dbcon-inc.php';
 if($_SERVER["REQUEST_METHOD"] === "POST"){
@@ -22,10 +23,13 @@ if(empty($username)){
     $slt = $pdo->prepare("SELECT * FROM `events_users` WHERE username =:username");
     $slt->execute(['username' => $username]);
     $user = $slt->fetch();
+    $userid = $user['user_id'];
+    // print_r($user);
     if($user && password_verify($pass, $user['pass'])){
-        session_start();
+        // session_start();
         $_SESSION['username'] = $username;
-        header("Location: ../index.php?success=success");
+        $_SESSION['userid']=  $userid;
+        header("Location: ../index.php?success=$userid");
     }else{
         header("Location: ../login.php?error=Invalid Credentials");
     }

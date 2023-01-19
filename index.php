@@ -1,4 +1,6 @@
 <?php
+session_start(); 
+// echo  $_SESSION["userid"];
 include_once './header.php';
 ?>
 <section class="hero">
@@ -65,7 +67,11 @@ include_once './header.php';
         <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
         <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
         <div class="event-viewdetails">
-          <a href="">View Details</a>
+            <?php if(!isset($_SESSION['username'])){
+                echo "<a href='./login.php'>"."Login to Read More"."</a>";
+            }else{
+                echo "<a href='./eventpage.php'>"."Already logedin to View Details"."</a>";
+            } ?>
         </div>
       </div>
     </div>
