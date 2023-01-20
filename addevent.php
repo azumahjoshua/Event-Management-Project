@@ -6,6 +6,9 @@ include_once './header.php';
     <div class="event-form">
         <h1 class="form-title">Event Registration</h1>
         <form  action="./includes/addevent-inc.php" method="post">
+                 <?php if (isset($_GET['error'])) { ?>
+                    <p class="error"><?php echo $_GET['error']; ?></p>
+                 <?php }?>
             <div class="input-text-box">
                 <div class="form-group">
                     <label for="event_name" id="event_name-label">Event Name:</label>

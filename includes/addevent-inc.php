@@ -25,15 +25,15 @@ $pdo = include_once './dbcon-inc.php';
 
 
     // $user_id = userid;
-    $event_name = $_POST['event_name'];
-    $event_description = $_POST['event_description'];
-    $event_location = $_POST['event_location'];
-    $event_category = $_POST['event_location'];
-    $keywords= $_POST['event_keyword'];
-    $video_url = $_POST['video_url'];
-    $image_url = $_POST['image_url'];
-    $start_date = $_POST['startdate'];
-    $end_date = $_POST['enddate'];
+    $event_name = validate($_POST['event_name']);
+    $event_description = validate($_POST['event_description']);
+    $event_location = validate($_POST['event_location']);
+    $event_category = validate($_POST['event_location']);
+    $keywords= validate($_POST['keyword']);
+    $video_url = validate($_POST['video_url']);
+    $image_url = validate($_POST['image_url']);
+    $start_date =validate($_POST['startdate']);
+    $end_date = validate($_POST['enddate']);
 
      //sever side error  checking
     $user_data='event_name='.$event_name.
@@ -46,6 +46,53 @@ $pdo = include_once './dbcon-inc.php';
     '&start_date='.$start_date.
     '&end_date='.$end_date;
 
-    
 
+    if(empty($event_name)){
+     header("Location: ../addevent.php?error=Event Name is required&$user_data");
+    exit();
+    }else if(empty($event_description)){
+     header("Location: ../addevent.php?error=Event Description is required&$user_data");
+     exit();
+     }else if(empty($event_location)){
+     header("Location: ../addevent.php?error=Event Location required&$user_data");
+     exit();
+    }else if(empty($event_category)){
+     header("Location: ../addevent.php?error=Event Category is required&$user_data");
+     exit();
+    }else if(empty($keywords)){
+     header("Location: ../addevent.php?error=Keyword required&$user_data");
+     exit();
+    }else if(empty($image_url)){
+     header("Location: ../addevent.php?error=Image url is required&$user_data");
+     exit();
+    }else if(empty($start_date)){
+     header("Location: ../addevent.php?error=Starting Date is required&$user_data");
+     exit();
+    }else if(empty($end_date)){
+     header("Location: ../addevent.php?error=End Date is required&$user_data");
+     exit();
+    }else{
+        $sql = "INSERT INTO event_details(user_id,event_name,event_description,event_location,event_category,keywords,video_url,image_url,start_date,end_date)
+         VALUES(:user_id,:event_name,:event_description,:event_location,:event_category,:keywords,:video_url,:image_url,:start_date,:end_date)";
+        $stmt= $pdo->prepare($sql);
+        $stmt->bindParam(':user_id',$userid);
+        $stmt->bindParam(':event_name',$event_name);
+        $stmt->bindParam(':event_description',$event_description);
+        $stmt->bindParam(':event_location',$event_location);
+        $stmt->bindParam(':event_category',$event_category);
+        $stmt->bindParam(':keywords',$keywords);
+        $stmt->bindParam(':video_url',$video_url);
+        $stmt->bindParam(':image_url',$image_url);
+        $stmt->bindParam(':start_date',$start_date);
+        $stmt->bindParam(':end_date',$end_date);
+        $result1 = $stmt->execute();
+         if(!$result1){
+            header("Location: ../addevent.php?error=unknown error occurred&$user_data");
+          exit();
+          }else{
+            header("Location: ../eventpage.php?");
+            exit();
+  }
+
+    }
     }

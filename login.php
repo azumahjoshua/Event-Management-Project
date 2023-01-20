@@ -7,7 +7,10 @@ include_once './header.php';
         <form class="form-registeration" action="./includes/login-inc.php" method="post">
               <?php if (isset($_GET['error'])) { ?>
              <p class="error"><?php echo $_GET['error']; ?></p>
-            <?php } ?>
+            <?php }else ?>
+            <?php  {;?>
+                <p> <?php echo " ";?> </p>
+            <?php }?>
         <?php if (isset($_GET['success'])) { ?>
             <p class="success"><?php echo $_GET['success']; ?></p>
         <?php } ?>
