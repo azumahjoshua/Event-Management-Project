@@ -26,128 +26,118 @@ include_once './header.php';
     <h5>Events</h5>
     <h3>Popular Event</h3>
   </div>
-  <div class="event-category">
-    <ul>
-      <li class="nav-item"><button> Business</button></li>
-      <!-- <li class="nav-item"><button> Sport</button></li> -->
-      <!-- <li class="nav-item"><button> Tech</button></li> -->
-      <li class="nav-item"><button> Education</button></li>
-    </ul>
-  </div>
-  <div class="all-event-cards">
-    <div class="event-card">
-      <img src="https://demo.egenslab.com/html/eventlab/assets/images/event/ev-md1.png" alt="ev-md1">
-      <div class="event-content">
-        <div class="event-info">
-          <div class="event-date">
-            <i class="fa fa-calendar" aria-hidden="true"></i>January 21, 2021
-          </div>
-          <div class="event-location">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>Broadw, New York
-          </div>
-        </div>
-        <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
-        <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
-        <div class="event-viewdetails">
-            <a href=""> </a>
-        </div>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="https://demo.egenslab.com/html/eventlab/assets/images/event/ev-md1.png" alt="ev-md1">
-      <div class="event-content">
-        <div class="event-info">
-             <div class="event-date">
-   <i class="fa fa-calendar" aria-hidden="true"></i>January 21, 2021
- </div>
- <div class="event-location">
-   <i class="fa fa-map-marker" aria-hidden="true"></i>Broadw, New York
- </div>
-        </div>
-        <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
-        <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
-        <div class="event-viewdetails">
-            <?php if(!isset($_SESSION['username'])){
-                echo "<a href='./login.php'>"."Login to Read More"."</a>";
-            }else{
-                echo "<a href='./eventpage.php'>"."Already logedin to View Details"."</a>";
-            } ?>
-        </div>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="https://demo.egenslab.com/html/eventlab/assets/images/event/ev-md1.png" alt="ev-md1">
-      <div class="event-content">
-        <div class="event-info">
-             <div class="event-date">
-   <i class="fa fa-calendar" aria-hidden="true"></i>January 21, 2021
- </div>
- <div class="event-location">
-   <i class="fa fa-map-marker" aria-hidden="true"></i>Broadw, New York
- </div>
-        </div>
-        <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
-        <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
-        <div class="event-viewdetails">
-          <a href="">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="https://demo.egenslab.com/html/eventlab/assets/images/event/ev-md1.png" alt="ev-md1">
-      <div class="event-content">
-        <div class="event-info">
-             <div class="event-date">
-   <i class="fa fa-calendar" aria-hidden="true"></i>January 21, 2021
- </div>
- <div class="event-location">
-   <i class="fa fa-map-marker" aria-hidden="true"></i>Broadw, New York
- </div>
-        </div>
-        <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
-        <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
-        <div class="event-viewdetails">
-          <a href=""> View Details </a>
-        </div>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="https://demo.egenslab.com/html/eventlab/assets/images/event/ev-md1.png" alt="ev-md1">
-      <div class="event-content">
-        <div class="event-info">
-          <div class="event-date">
-            <span>January 21, 2021</span>
-          </div>
-          <div class="event-Location">
-            <span>Broadw, New York</span>
-          </div>
-        </div>
-        <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
-        <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
-        <div class="event-viewdetails">
-          <a href="">View Details</a>
-        </div>
-      </div>
-    </div>
-    <div class="event-card">
-      <img src="https://demo.egenslab.com/html/eventlab/assets/images/event/ev-md1.png" alt="ev-md1">
-      <div class="event-content">
-        <div class="event-info">
-             <div class="event-date">
-   <i class="fa fa-calendar" aria-hidden="true"></i>January 21, 2021
- </div>
- <div class="event-location">
-   <i class="fa fa-map-marker" aria-hidden="true"></i>Broadw, New York
- </div>
-        </div>
-        <h5 class="event-title">Media companies need to better one then educate advertisers.</h5>
-        <p class="event-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio nostrum u</p>
-        <div class="event-viewdetails">
-          <a href="">View Details</a>
-        </div>
-      </div>
-    </div>
-  </div>
+     <div class="event-nav event-category">
+       <ul class="horizontal-list">
+           <li> <a href="">Business</a> </li>
+           <li> <a href="">Tech</a> </li>
+           <li> <a href="">Education</a> </li>
+       </ul>
+   </div>
+   <div class="eventdetails-section">
+       <div class="evnt-item">
+           <div class="evnt-img">
+               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+           </div>
+           <div class="evnt-content">
+               <div class="info">
+                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span>-</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>                
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
+               </div>
+               <h5>OMR16</h5>
+               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
+              <span class="readmore"><a href="">Read More</a> </span>
+              <span class="category">Business</span>
+           </div>
+           
+       </div> 
+       <div class="evnt-item">
+           <div class="evnt-img">
+               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+           </div>
+           <div class="evnt-content">
+               <div class="info">
+                    <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span>-</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>          
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
+               </div>
+               <h5>OMR16</h5>
+               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
+               <span class="readmore"><a href="">Read More</a> </span>
+              <span class="category">Business</span>
+           </div>
+       </div>
+       <div class="evnt-item">
+           <div class="evnt-img">
+               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+           </div>
+           <div class="evnt-content">
+               <div class="info">
+                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span>-</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>          
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
+               </div>
+               <h5>OMR16</h5>
+               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
+               <span class="readmore"><a href="">Read More</a> </span>
+              <span class="category">Tech</span>
+           </div>
+       </div>
+       <div class="evnt-item">
+           <div class="evnt-img">
+               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+           </div>
+           <div class="evnt-content">
+               <div class="info">
+                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span>-</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>          
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
+               </div>
+               <h5>OMR16</h5>
+               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
+              <span class="readmore"><a href="">Read More</a> </span>
+              <span class="category">Education</span>
+           </div>
+       </div>
+       <div class="evnt-item">
+           <div class="evnt-img">
+               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+           </div>
+           <div class="evnt-content">
+               <div class="info">
+                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span>-</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>         
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
+               </div>
+               <h5>OMR16</h5>
+               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
+               <span class="readmore"><a href="">Read More</a> </span>
+              <span class="category">Business</span>
+           </div>
+       </div>
+       <div class="evnt-item">
+           <div class="evnt-img">
+               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+           </div>
+           <div class="evnt-content">
+               <div class="info">
+                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span>-</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>         
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>                    
+               </div>
+               <h5>OMR16</h5>
+               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
+               <span class="readmore"><a href="">Read More</a> </span>
+              <span class="category">Education</span>
+           </div>
+       </div>
+   </div>
 </section>
 
 <?php
