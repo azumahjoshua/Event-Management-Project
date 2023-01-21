@@ -45,7 +45,7 @@ $et= $stm->fetch(PDO::FETCH_OBJ);
         if($_SESSION['userid'] == $et->user_id){
             // event_id=<?=$event->event_id>
             $edit = "<a href='./editevent.php?event_id=$et->event_id'><button type='button'><span class='buton-20-span'></span>Edit</button></a>";
-            $delete="<a id='deleteevetnt' href='./deleteevent.php?event_id=$et->event_id'><button type='button'><span class='buton-20-span'></span>Delete</button></a>";
+            $delete="<a id='deleteevetnt' href='./includes/deleteevent-inc.php?event_id=$et->event_id'><button type='button'><span class='buton-20-span'></span>Delete</button></a>";
         echo "<div class='button-2'>
         .$edit
         .$delete";

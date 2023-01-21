@@ -11,7 +11,8 @@ $pdo = include_once './dbcon-inc.php';
     }
     // var_dump($_POST);
     $event_name = validate($_POST['event_name']);
-    var_dump($_POST['event_name']);
+    $user_id = $_SESSION['userid'];
+    // var_dump($_POST['event_name']);
     $event_description = validate($_POST['event_description']);
     echo $event_description;
     $event_location = validate($_POST['event_location']);
@@ -61,7 +62,8 @@ $pdo = include_once './dbcon-inc.php';
      exit();
     }else{
         $event_id = $_GET["event_id"];
-        $sql = "UPDATE `event_details` SET 
+        $sql = "UPDATE `event_details` SET
+        user_id=:user_id,
         event_name=:event_name,
         event_description=:event_description,
         event_location=:event_location,
@@ -71,10 +73,11 @@ $pdo = include_once './dbcon-inc.php';
         image_url=:image_url,
         start_date=:start_date,
         end_date=:end_date
-        WHERE event_id=:event_id";
+        WHERE `event_details`.`event_id`=:event_id";
         $stmt= $pdo->prepare($sql);
         $result = $stmt->execute(
         ['event_id'=>$event_id,
+        ':user_id'=>$$user_id,
         ':event_name'=>$event_name,
         ':event_description'=>$event_description,
         ':event_location'=>$event_location,
