@@ -17,9 +17,9 @@ $events = $stm->fetchAll(PDO::FETCH_OBJ);
 </section>
     <div class="event-nav">
         <ul class="horizontal-list">
-            <li> <a href="./createevent.php">Add Event</a> </li>
+            <li> <a href="createevent.php">Add Event</a> </li>
             <li> <a href="eventpage.php">Category</a> </li>
-            <li> <a href="eventpage.php">View Event</a> </li>
+            <li> <a href="viewevnt.php">View All Event</a> </li>
         </ul>
     </div>
     <div class="eventdetails-section">
@@ -38,7 +38,7 @@ $events = $stm->fetchAll(PDO::FETCH_OBJ);
                     <h5><?=$event->event_name?></h5>
                     <p class="event-desc"><?=$event->event_description?></p>
                     <div class="event-detail">
-                        <span class="readmore"><a href="">Read More</a></span>
+                        <span class="readmore"><a href="./eachevent.php?event_id=<?=$event->event_id?>">Read More</a></span>
                         <span class="category"><?=$event->event_category?></span>
                     </div>
                 </div>

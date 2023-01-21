@@ -6,12 +6,6 @@ include_once './header.php';
 <section class="hero">
     <div class="hero-content">
         <h1>SIST Student Union </h1>
-        <!-- <img src="./images/img1.jpg" alt="Hero Image"> -->
-        <!-- <div class="header"> -->
-            <!-- https://codepen.io/yemon/pen/dzgmxJ -->
-             <!-- <div id="sist"> SIST  </div> -->
-            <!-- <div id="su"> <span> Student Union <span></div> -->
-        <!-- </div> -->
         <p>Welcome to SIST student Union portal <br> where you can create events and
             more ... <br>Do you have an account </p>
         <div class="button-2">

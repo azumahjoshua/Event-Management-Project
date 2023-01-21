@@ -4,13 +4,13 @@ export function eventValidation() {
 	const event_name = document.getElementById("event_name");
 	const event_description = document.getElementById("event_description");
 	const event_location = document.getElementById("event_location");
-	// const eventcategory = document.getElementById("event_category");
+	const eventcategory = document.getElementById("event_category");
 	const keyword = document.getElementById("event_keyword");
 	const video_url = document.getElementById("video_url");
 	const image_url = document.getElementById("image_url");
-	const startdate = document.getElementById("startdate").value;
+	const startdate = document.getElementById("startdate");
 	// console.log(startdate);
-	const enddate = document.getElementById("end_date").value;
+	const enddate = document.getElementById("end_date");
 	// console.log(enddate);
 	//
 	const event_registeration_form = document.querySelector("form");

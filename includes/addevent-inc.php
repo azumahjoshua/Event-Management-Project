@@ -5,7 +5,7 @@ $pdo = include_once './dbcon-inc.php';
     // Server side data Validation
     function validate($data){
         $data = trim($data);
-	    $data = stripslashes($data);
+	      $data = stripslashes($data);
         $data = htmlspecialchars($data);
 	    return $data;
     }
@@ -37,7 +37,7 @@ $pdo = include_once './dbcon-inc.php';
 
      //sever side error  checking
     $user_data='event_name='.$event_name.
-    '&event_descriptio='.$event_descriptio.
+    '&event_descriptio='.$event_description.
     '&event_location='.$event_location.
     '&event_category='.$event_category.
     '&keywords='.$keywords.
@@ -87,10 +87,10 @@ $pdo = include_once './dbcon-inc.php';
         $stmt->bindParam(':end_date',$end_date);
         $result1 = $stmt->execute();
          if(!$result1){
-            header("Location: ../addevent.php?error=unknown error occurred&$user_data");
+            header("Location: ../createevent.php?error=unknown error occurred&$user_data");
           exit();
           }else{
-            header("Location: ../eventpage.php?");
+            header("Location: ../eventpage.php");
             exit();
   }
 

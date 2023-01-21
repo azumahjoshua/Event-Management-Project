@@ -269,7 +269,7 @@ a > span::after {
 	justify-content: center;
 }
 .button-2 button {
-	width: 200px;
+	width: 150px;
 	padding: 15px 0;
 	text-align: center;
 	margin: 20px 10px;
@@ -693,4 +693,134 @@ button:hover {
 	font-weight: bolder;
 	/* margin-left: 10px; */
 	color: #e74c3c;
+}
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-shadow5 */
+.each-event {
+	position: relative;
+	background: #e7ecf1;
+	width: 100%;
+	height: 1000px;
+	padding-top: 30px;
+	overflow: hidden;
+}
+.event-hero-header {
+	position: absolute;
+	top: 100px;
+	width: 80%;
+	height: 180px;
+	/* margin: 0 auto; */
+	left: 10%;
+	right: 10%;
+	background: #fff;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 3px;
+}
+.headerimg {
+	position: absolute;
+	top: 25%;
+	width: 150px;
+	height: 100px;
+	margin-left: 20px;
+	/* background-color: #195991; */
+}
+.headerimg img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.headertext {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+}
+
+.headertext h1 {
+	/* height: auto; */
+	font-size: 1.5rem;
+	line-height: 30px;
+	margin-top: 20px;
+	font-weight: bolder;
+	color: #2e363f;
+}
+
+.headertext p {
+	font-size: 0.8125rem;
+	color: #888;
+	margin: 15px 10px 0 20px;
+}
+
+.headertext p i {
+	margin-right: 10px;
+	color: #195991;
+}
+.each-event-body {
+	position: absolute;
+	top: 315px;
+	display: flex;
+	justify-content: space-between;
+	left: 10%;
+	right: 10%;
+	/* width: 100%; */
+	/* margin-left: 20px; */
+}
+.event-hero-left {
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+	/* margin-left: -20px; */
+	width: 60%;
+	/* margin-right: 30px; */
+}
+.event-hero-left img {
+	width: 100%;
+	height: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+	/* padding-bottom: 50px; */
+}
+.event-hero-left h1 {
+	font-size: 1rem;
+	line-height: 26px;
+	text-transform: none;
+	font-weight: 900;
+	font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #2e363f;
+	margin-bottom: 5px;
+	padding-left: 20px;
+	/* display: inline-block; */
+}
+.event-hero-left p {
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #565c68;
+	padding-bottom: 30px;
+	margin-top: 20px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+.event-hero-right {
+	/* background-color: #76615f; */
+	/* margin-right: 20px; */
+	width: 35%;
+	height: 300px;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-left: 20px;
+	padding-top: 40px;
+	/* margin: 50px 0; */
+}
+.eventdatetime {
+	margin-bottom: 20px;
+}
+.event-hero-right h5 {
+	line-height: 20px;
+	color: #2e363f;
+	text-rendering: optimizelegibility;
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: 5px;
+	display: block;
+	text-transform: none;
 }
