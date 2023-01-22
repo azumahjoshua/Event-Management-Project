@@ -25,7 +25,6 @@ $eth= $stm->fetch(PDO::FETCH_OBJ);
                         placeholder="Enter Event Name">
                         <small>Error message</small>
                 </div>
-
                 <div class="form-group">
                     <label for="event_description" id="description-label">Event Description:</label>
                     <textarea style="height:50px;resize:vertical;" 
@@ -55,8 +54,10 @@ $eth= $stm->fetch(PDO::FETCH_OBJ);
                         chose event type
                     </option>
                     <option value="other">Other</option>
-                    <option value="business">Business</option>
-                    <option value="education">Education</option>
+                     <option value="Business">Business</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Education">Education</option>
+                    <option value="Entertainment">Entertainment</option>
                     </select>
                 </div>
 

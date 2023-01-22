@@ -2,6 +2,11 @@
 session_start(); 
 // echo  $_SESSION["userid"];
 include_once './header.php';
+$pdo = include_once './includes/dbcon-inc.php';
+$sql = 'SELECT *  FROM `event_details` LIMIT 6';
+$stm = $pdo->prepare($sql);
+$stm->execute();
+$ets = $stm->fetchAll(PDO::FETCH_OBJ);
 ?>
 <section class="hero">
     <div class="hero-content">
@@ -16,121 +21,39 @@ include_once './header.php';
     </div>
 </section>
 <section class="event-area">
-  <div class="section-head">
-    <h5>Events</h5>
-    <h3>Popular Event</h3>
-  </div>
-     <div class="event-nav event-category">
+    <div class="event-nav event-category">
        <ul class="horizontal-list">
-           <li> <a href="">Business</a> </li>
-           <li> <a href="">Tech</a> </li>
-           <li> <a href="">Education</a> </li>
+           <li> <a href="./eventcategories.php?event_category=Business">Business</a> </li>
+           <li> <a href="./eventcategories.php?event_category=Tech">Tech</a> </li>
+           <li> <a href="./eventcategories.php?event_category=Education">Education</a> </li>
+           <li> <a href="./eventcategories.php?event_category=Entertainment">Entertainment</a> </li>
        </ul>
    </div>
+   <div class="section-head">
+        <h5>Events</h5>
+        <h3>Popular Event</h3>
+    </div>
    <div class="eventdetails-section">
+        <?php foreach($ets as $ent): ?>
        <div class="evnt-item">
            <div class="evnt-img">
-               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
+               <img src="<?=$ent->image_url;?>">
            </div>
            <div class="evnt-content">
                <div class="info">
-                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
+                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i><?=$ent->start_date?></span>
                    <span>-</span>
-                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>                
-                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
+                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i><?=$ent->end_date?></span>                
+                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i><?=$ent->event_location?></span>
                </div>
-               <h5>OMR16</h5>
-               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
-              <span class="readmore"><a href="">Read More</a> </span>
-              <span class="category">Business</span>
+               <h5><?=$ent->event_name?></h5>
+               <p class="event-desc"><?=$ent->event_description?></p>
+              <!-- <span class="readmore"><a href="">Read More</a> </span> -->
+              <span class="category"><?=$ent->event_category?></span>
            </div>
-           
        </div> 
-       <div class="evnt-item">
-           <div class="evnt-img">
-               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
-           </div>
-           <div class="evnt-content">
-               <div class="info">
-                    <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
-                   <span>-</span>
-                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>          
-                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
-               </div>
-               <h5>OMR16</h5>
-               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
-               <span class="readmore"><a href="">Read More</a> </span>
-              <span class="category">Business</span>
-           </div>
-       </div>
-       <div class="evnt-item">
-           <div class="evnt-img">
-               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
-           </div>
-           <div class="evnt-content">
-               <div class="info">
-                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
-                   <span>-</span>
-                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>          
-                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
-               </div>
-               <h5>OMR16</h5>
-               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
-               <span class="readmore"><a href="">Read More</a> </span>
-              <span class="category">Tech</span>
-           </div>
-       </div>
-       <div class="evnt-item">
-           <div class="evnt-img">
-               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
-           </div>
-           <div class="evnt-content">
-               <div class="info">
-                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
-                   <span>-</span>
-                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>          
-                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
-               </div>
-               <h5>OMR16</h5>
-               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
-              <span class="readmore"><a href="">Read More</a> </span>
-              <span class="category">Education</span>
-           </div>
-       </div>
-       <div class="evnt-item">
-           <div class="evnt-img">
-               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
-           </div>
-           <div class="evnt-content">
-               <div class="info">
-                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
-                   <span>-</span>
-                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>         
-                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>
-               </div>
-               <h5>OMR16</h5>
-               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
-               <span class="readmore"><a href="">Read More</a> </span>
-              <span class="category">Business</span>
-           </div>
-       </div>
-       <div class="evnt-item">
-           <div class="evnt-img">
-               <img src="https://cdn-az.allevents.in/events5/banners/eaf9b065f964c8593f5bec5e198c797e8578b15b1e0f34adba1e751b8f1bcffe-rimg-w960-h540-gmir.jpg">
-           </div>
-           <div class="evnt-content">
-               <div class="info">
-                   <span class="startdate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 3, 2023</span>
-                   <span>-</span>
-                   <span class="enddate"><i class="fa fa-calendar" aria-hidden="true"></i>Feb 5, 2023 </span>         
-                   <span class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Rabat</span>                    
-               </div>
-               <h5>OMR16</h5>
-               <p class="event-desc">École nationale supérieure des mines de Rabat</p>
-               <span class="readmore"><a href="">Read More</a> </span>
-              <span class="category">Education</span>
-           </div>
-       </div>
+    <?php endforeach; ?>
+
    </div>
 </section>
 

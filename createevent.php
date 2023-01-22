@@ -1,11 +1,12 @@
 <?php
+session_start(); 
 include_once './header.php';
 // print_r($_POST);
 ?>
 <section class="event-add-section">
     <div class="event-form">
         <h1 class="form-title">Event Registration</h1>
-        <form  action="./includes/addevent-inc.php" method="post">
+        <form  action="./includes/createevent-inc.php" method="post">
                  <?php if (isset($_GET['error'])) { ?>
                     <p class="error"><?php echo $_GET['error']; ?></p>
                  <?php }?>
@@ -32,8 +33,10 @@ include_once './header.php';
                         chose event type
                     </option>
                     <option value="other">Other</option>
-                    <option value="business">Business</option>
-                    <option value="education">Education</option>
+                    <option value="Business">Business</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Education">Education</option>
+                    <option value="Entertainment">Entertainment</option>
                     </select>
                 </div>
                 <div class="form-group">

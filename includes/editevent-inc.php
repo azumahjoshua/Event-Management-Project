@@ -14,7 +14,7 @@ $pdo = include_once './dbcon-inc.php';
     $user_id = $_SESSION['userid'];
     // var_dump($_POST['event_name']);
     $event_description = validate($_POST['event_description']);
-    echo $event_description;
+    // echo $event_description;
     $event_location = validate($_POST['event_location']);
     $event_category = validate($_POST['event_category']);
     $keywords= validate($_POST['keyword']);

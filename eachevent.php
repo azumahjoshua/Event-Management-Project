@@ -1,6 +1,8 @@
 <?php
 session_start(); 
 // echo  $_SESSION["userid"];
+// include_once './header.php';
+
 $pdo = include_once './includes/dbcon-inc.php';
 $event_id = $_GET["event_id"];
 $sql = 'SELECT *  FROM `event_details` WHERE event_id=:event_id';

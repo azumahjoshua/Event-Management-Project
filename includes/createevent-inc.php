@@ -17,6 +17,7 @@ $pdo = include_once './dbcon-inc.php';
     // print_r($_SERVER["REQUEST_METHOD"]);
     // echo  $_SESSION["userid"];
     $userid = $_SESSION["userid"];
+    // echo $userid;
     $slt = $pdo->prepare("SELECT user_id, username FROM `events_users` WHERE user_id=:user_id");
     $slt->execute(['user_id' => $userid]);
     $user = $slt->fetch();
@@ -87,9 +88,11 @@ $pdo = include_once './dbcon-inc.php';
         $stmt->bindParam(':end_date',$end_date);
         $result1 = $stmt->execute();
          if(!$result1){
+            echo "cant insert";
             header("Location: ../createevent.php?error=unknown error occurred&$user_data");
           exit();
           }else{
+            echo "inserted";
             header("Location: ../eventpage.php");
             exit();
   }

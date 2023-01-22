@@ -1,28 +1,22 @@
 <?php
 session_start(); 
 $pdo = include_once './includes/dbcon-inc.php';
+$event_category=$_GET['event_category'];
 
-$sql = 'SELECT *  FROM `event_details`';
+$sql = 'SELECT *  FROM `event_details` WHERE event_category=:event_category';
 $stm = $pdo->prepare($sql);
-$stm->execute();
-$events = $stm->fetchAll(PDO::FETCH_OBJ);
+$stm->execute(['event_category'=>$event_category]);
+$etc = $stm->fetchAll(PDO::FETCH_OBJ);
 
 ?>
 <?php include_once "./header.php";?>
 <section class="event-hero">
     <div class="event-hero-content">
-        <h1>Event Details </h1>
+        <h1><?php echo $event_category;?> </h1>
     </div>
 </section>
-    <div class="event-nav">
-        <ul class="horizontal-list">
-            <li> <a href="createevent.php"><i class="fa fa-plus" aria-hidden="true"></i> Create Event</a> </li>
-            <li> <a href="eventpage.php">Category</a> </li>
-            <li> <a href="viewevnt.php">View All Event</a> </li>
-        </ul>
-    </div>
     <div class="eventdetails-section">
-        <?php foreach($events as $event): ?>
+        <?php foreach($etc as $event): ?>
         <div class="evnt-item">
                 <div class="evnt-img">
                     <img src="<?=$event->image_url;?>" alt="">
@@ -47,3 +41,63 @@ $events = $stm->fetchAll(PDO::FETCH_OBJ);
 <?php
     include_once "./footer.php";
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
