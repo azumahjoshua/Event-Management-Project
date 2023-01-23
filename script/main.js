@@ -1,10 +1,10 @@
 import { toggleMenu } from "./toggleMenu.js";
-import { registeValidation } from "./registration.js";
+import { registerValidation } from "./registration.js";
 import { scrollChange } from "./scrol.js";
 import { eventValidation } from "./eventscript.js";
 import { deleteEvent } from "./delete.js";
 toggleMenu();
-registeValidation();
+registerValidation();
 scrollChange();
 eventValidation();
 deleteEvent();

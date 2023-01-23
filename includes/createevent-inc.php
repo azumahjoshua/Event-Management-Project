@@ -73,7 +73,8 @@ $pdo = include_once './dbcon-inc.php';
      header("Location: ../addevent.php?error=End Date is required&$user_data");
      exit();
     }else{
-        $sql = "INSERT INTO event_details(user_id,event_name,event_description,event_location,event_category,keywords,video_url,image_url,start_date,end_date)
+        $sql = "INSERT INTO event_details(user_id,event_name,event_description,event_location,event_category,keywords,video_url,image_url,
+        start_date,end_date)
          VALUES(:user_id,:event_name,:event_description,:event_location,:event_category,:keywords,:video_url,:image_url,:start_date,:end_date)";
         $stmt= $pdo->prepare($sql);
         $stmt->bindParam(':user_id',$userid);

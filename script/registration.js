@@ -1,4 +1,4 @@
-export function registeValidation() {
+export function registerValidation() {
 	/* Form Validation */
 	// console.log(form);
 	const username = document.getElementById("username");

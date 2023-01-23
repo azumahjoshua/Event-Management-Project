@@ -16,9 +16,11 @@ $events = $stm->fetchAll(PDO::FETCH_OBJ);
 </section>
     <div class="event-nav">
         <ul class="horizontal-list">
-            <li> <a href="createevent.php"><i class="fa fa-plus" aria-hidden="true"></i> Create Event</a> </li>
-            <li> <a href="eventpage.php">Category</a> </li>
-            <li> <a href="viewevnt.php">View All Event</a> </li>
+            <li>
+                <div class="button-2">
+                    <a href="createevent.php"> <button type="button"><span class="buton-20-span"><i class="fa fa-plus" aria-hidden="true"></i> Create Event</a></span> </button> </a>
+                </div>
+            </li>
         </ul>
     </div>
     <div class="eventdetails-section">

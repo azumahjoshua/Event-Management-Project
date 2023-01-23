@@ -12,7 +12,7 @@ $ets = $stm->fetchAll(PDO::FETCH_OBJ);
     <div class="hero-content">
         <h1>SIST Student Union </h1>
         <p>Welcome to SIST student Union portal <br> where you can create events and
-            more ... <br>Do you have an account </p>
+            more ... <br>Do you have an account? </p>
         <div class="button-2">
             <a href="./register.php"> <button type="button"><span class="buton-20-span"></span> Register</button> </a>
             <a href="./login.php"> <button type="button"><span class="buton-20-span"></span> Log in</button> </a>
@@ -51,9 +51,13 @@ $ets = $stm->fetchAll(PDO::FETCH_OBJ);
               <!-- <span class="readmore"><a href="">Read More</a> </span> -->
               <span class="category"><?=$ent->event_category?></span>
            </div>
+           <div class="start">
+            <i class="fa fa-star-o" style="font-size:36px"></i>
+            <i class="fa fa-star-o" style="font-size:24px"></i>
+            <i class="fa fa-star-o" ></i>
+           </div>
        </div> 
     <?php endforeach; ?>
-
    </div>
 </section>
 
