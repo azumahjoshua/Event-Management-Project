@@ -26,7 +26,7 @@ $pdo = include_once './dbcon-inc.php';
 
      //sever side error  checking
     $user_data='event_name='.$event_name.
-    '&event_descriptio='.$event_description.
+    '&event_description='.$event_description.
     '&event_location='.$event_location.
     '&event_category='.$event_category.
     '&keywords='.$keywords.
@@ -73,11 +73,11 @@ $pdo = include_once './dbcon-inc.php';
         image_url=:image_url,
         start_date=:start_date,
         end_date=:end_date
-        WHERE `event_details`.`event_id`=:event_id";
+        WHERE event_id=:event_id";
         $stmt= $pdo->prepare($sql);
         $result = $stmt->execute(
         ['event_id'=>$event_id,
-        ':user_id'=>$$user_id,
+        ':user_id'=>$user_id,
         ':event_name'=>$event_name,
         ':event_description'=>$event_description,
         ':event_location'=>$event_location,
@@ -86,14 +86,15 @@ $pdo = include_once './dbcon-inc.php';
         ':video_url'=>$video_url,
         ':image_url'=>$image_url,
         ':start_date'=>$start_date,
-        ':end_date'=>$end_date]);
-        if(!$result){
-            header("Location: ../editevent.php?error=unknown error occurred&$user_data");
+        ':end_date'=>$end_date]
+        );
+        if($result){
+            header("Location: ../eventpage.php?success=Event Updated Successfully");
             exit();
-        }else{
-          header("Location: ../eventpage.php?");
-          exit();
         }
-  }
+        else{
+            header("Location: ../editevent.php?error=Some Error Occured while Updating Event");
+            exit();
+        }
+    }
 }
-  

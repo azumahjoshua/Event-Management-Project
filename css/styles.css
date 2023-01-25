@@ -121,6 +121,140 @@ a > span::after {
 	border-bottom: 1px solid lightgray;
 }
 /* Nav bar ends start */
+/* About Section */
+.about-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: #f2f2f2;
+	/* padding: 50px 0; */
+}
+
+.about-self-container {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	animation: slidein 2s ease-in 1s;
+
+	/* transform: translateY(100%); */
+	overflow: hidden;
+	position: relative;
+	/* top: 100%; */
+}
+@keyframes slidein {
+	from {
+		transform: translateY(20%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+.profile_text {
+	width: 50%;
+	text-align: center;
+	padding: 20px;
+}
+.profile_text h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	animation: fadein 2s ease-in 1s;
+	animation: fontSize 3s ease-in 3s;
+	animation-delay: 3s;
+}
+@keyframes fontSize {
+	0% {
+		font-size: 12px;
+	}
+	50% {
+		font-size: 24px;
+	}
+	100% {
+		font-size: 36px;
+	}
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.profile_text p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+.headering {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.profile_img {
+	width: 50%;
+	text-align: center;
+	padding: 20px;
+}
+
+.profile_img img {
+	width: 100%;
+	max-width: 300px;
+	border-radius: 50%;
+}
+@media (max-width: 768px) {
+	.profile_text {
+		width: 100%;
+		text-align: center;
+	}
+
+	.profile_img {
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+	}
+
+	.profile_img img {
+		max-width: 200px;
+	}
+}
+.about-section-website {
+	background-color: #f5f5f5;
+	padding: 30px;
+}
+
+.about-website-container {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.about-website-container h3 {
+	color: #333;
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+.about-website-container p {
+	color: #444;
+	font-size: 1.2em;
+	line-height: 1.5;
+	text-align: justify;
+}
+@media (max-width: 600px) {
+	.about-website-container {
+		max-width: 90%;
+	}
+	.about-website-container h3 {
+		font-size: 1.5em;
+	}
+	.about-website-container p {
+		font-size: 1em;
+	}
+}
 /* Hero Section  */
 .hero {
 	color: white;
@@ -596,6 +730,7 @@ button:hover {
 }
 .event-nav .horizontal-list li a {
 	text-decoration: none;
+	color: #195991;
 }
 
 .eventdetails-section {
