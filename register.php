@@ -2,6 +2,21 @@
 include_once './header.php';
 // print_r($_POST);
 ?>
+<section class="about-section">
+        <div class="about-overlay"></div>
+    <div class="about-self-container">
+      <span class="title">Register</span>
+        <div class="profile_text">
+            <p>
+           <a href="./index.php">Home</a>
+            </p>
+            <p>
+           <span>|</span>
+            </p>
+           <p>Registration</p>
+        </div>
+    </div>
+</section>
 <section class="register-section">
     <div class="registeration-form">
         <h1 class="form-title">Registration From</h1>

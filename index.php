@@ -30,8 +30,8 @@ $ets = $stm->fetchAll(PDO::FETCH_OBJ);
        </ul>
    </div>
    <div class="section-head">
-        <h5>Events</h5>
-        <h3>Popular Event</h3>
+        <h5>Event Details</h5>
+        <h3>Up Coming Events</h3>
     </div>
    <div class="eventdetails-section">
         <?php foreach($ets as $ent): ?>
