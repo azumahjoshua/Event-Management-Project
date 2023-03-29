@@ -1,10 +1,12 @@
-import { toggleMenu } from "./toggleMenu.js";
+import { changeColor } from "./changebuttonColor.js";
+// import { deleteEvent } from "./delete.js";
+import { eventValidation } from "./eventscript.js";
 import { registerValidation } from "./registration.js";
 import { scrollChange } from "./scrol.js";
-import { eventValidation } from "./eventscript.js";
-import { deleteEvent } from "./delete.js";
+import { toggleMenu } from "./toggleMenu.js";
 toggleMenu();
 registerValidation();
 scrollChange();
 eventValidation();
-deleteEvent();
+// deleteEvent();
+changeColor();

@@ -19,13 +19,16 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="./index.php">
-                    <h1>SIST</h1>
+                    <img src="./images/logo.png" alt="">
+                    <!-- <h1>SIST</h1> -->
                 </a>
             </div>
             <ul class="nav-links">
                 <li class="nav-items"> <a href="./about.php"> <span>About</span></a> </li>
                 <li class="nav-items"> <a href="./register.php"> <span> Register</span> </a> </li>
                 <li class="nav-items"> <a href="./login.php"> <span> Log in </span></a> </li>
+                <li class="nav-items get-tickets"> <a class="get-ticketlink" href="./register.php"> <span> Get Tickets </span></a> </li>
+
                 <?php
                 $event = '<a href="./eventpage.php"> <span> Event </span></a> </li>';
                 if(isset($_SESSION['username'])){

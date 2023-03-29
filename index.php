@@ -9,10 +9,10 @@ $stm->execute();
 $ets = $stm->fetchAll(PDO::FETCH_OBJ);
 ?>
 <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>SIST Student Union </h1>
-        <p>Welcome to SIST student Union portal <br> where you can create events and
-            more ... <br>Do you have an account? </p>
+        <span class="title">Hurryup! Don't Waste Time</span>
+        <h1 class="header-title">Creative business agency Conference 2023</h1>
         <div class="button-2">
             <a href="./register.php"> <button type="button"><span class="buton-20-span"></span> Register</button> </a>
             <a href="./login.php"> <button type="button"><span class="buton-20-span"></span> Log in</button> </a>
