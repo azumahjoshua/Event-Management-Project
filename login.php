@@ -2,7 +2,6 @@
 include_once './header.php';
 ?>
 <section class="login-section">
-
     <div class="login-form">
         <h1 class="form-title">Log in</h1>
         <form class="form-registeration" action="./includes/login-inc.php" method="post">
