@@ -1,6 +1,21 @@
 <?php
 include_once './header.php';
 ?>
+<section class="about-section">
+        <div class="about-overlay"></div>
+    <div class="about-self-container">
+      <span class="title">Log in</span>
+        <div class="profile_text">
+            <p>
+           <a href="./index.php">Home</a>
+            </p>
+            <p>
+           <span>|</span>
+            </p>
+           <p>Log in</p>
+        </div>
+    </div>
+</section>
 <section class="login-section">
     <div class="login-form">
         <h1 class="form-title">Log in</h1>
