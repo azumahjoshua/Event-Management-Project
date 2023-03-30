@@ -32,7 +32,6 @@
                 <li class="nav-items"> <a href="./register.php"> <span> Register</span> </a> </li>
                 <li class="nav-items"> <a href="./login.php"> <span> Log in </span></a> </li>
                 <li class="nav-items get-tickets"> <a class="get-ticketlink" href="./register.php"> <span> Get Tickets </span></a> </li>
-
                 <?php
                 $event = '<a href="./eventpage.php"> <span> Event </span></a> </li>';
                 if(isset($_SESSION['username'])){

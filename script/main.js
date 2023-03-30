@@ -2,7 +2,7 @@ import { changeColor } from "./changebuttonColor.js";
 // import { deleteEvent } from "./delete.js";
 import { eventValidation } from "./eventscript.js";
 import { registerValidation } from "./registration.js";
-import { scrollChange } from "./scrol.js";
+import { scrollChange } from "./scroll.js";
 import { toggleMenu } from "./toggleMenu.js";
 toggleMenu();
 registerValidation();

@@ -3,6 +3,21 @@ session_start();
 include_once './header.php';
 // print_r($_POST);
 ?>
+<section class="about-section">
+        <div class="about-overlay"></div>
+    <div class="about-self-container">
+      <span class="title">Create Event</span>
+        <div class="profile_text">
+            <p>
+           <a href="./index.php">Home</a>
+            </p>
+            <p>
+           <span>|</span>
+            </p>
+           <p>Create Event</p>
+        </div>
+    </div>
+</section>
 <section class="event-add-section">
     <div class="event-form">
         <h1 class="form-title">Event Registration</h1>

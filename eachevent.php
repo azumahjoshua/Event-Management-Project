@@ -13,6 +13,21 @@ $et= $stm->fetch(PDO::FETCH_OBJ);
 
 ?>
 <?php include_once "./header.php";?>
+<section class="about-section">
+        <div class="about-overlay"></div>
+    <div class="about-self-container">
+      <span class="title">Event Page</span>
+        <div class="profile_text">
+            <p>
+           <a href="./index.php">Home</a>
+            </p>
+            <p>
+           <span>|</span>
+            </p>
+           <p>Event Page</p>
+        </div>
+    </div>
+</section>
 <section class="each-event">
     <div class="event-hero-header">
         <div class="headerimg">
@@ -24,7 +39,7 @@ $et= $stm->fetch(PDO::FETCH_OBJ);
             <p class="start-location"><i class="fa fa-map-marker" aria-hidden="true"></i><?=$et->event_location;?></p>
         </div>
     </div>
-</section>
+
 <section class="each-event-body">
     <div class="event-hero-left">
         <img src="<?=$et->image_url;?>">
@@ -58,6 +73,7 @@ $et= $stm->fetch(PDO::FETCH_OBJ);
             <p class="error"><?php echo $_GET['error']; ?></p>
   <?php } ?>
     </div>
+</section>
 </section>
 <?php
     include_once "./footer.php";

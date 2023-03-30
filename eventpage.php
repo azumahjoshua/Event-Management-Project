@@ -9,9 +9,19 @@ $events = $stm->fetchAll(PDO::FETCH_OBJ);
 
 ?>
 <?php include_once "./header.php";?>
-<section class="event-hero">
-    <div class="event-hero-content">
-        <h1>Event Details </h1>
+<section class="about-section">
+        <div class="about-overlay"></div>
+    <div class="about-self-container">
+      <span class="title">Event Details</span>
+        <div class="profile_text">
+            <p>
+           <a href="./index.php">Home</a>
+            </p>
+            <p>
+           <span>|</span>
+            </p>
+           <p>Event Details</p>
+        </div>
     </div>
 </section>
     <div class="event-nav">
