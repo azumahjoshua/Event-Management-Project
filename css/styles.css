@@ -1149,14 +1149,14 @@ button:hover {
 		justify-content: center;
 	}
 	.event-hero-left {
-		width: 80%;
+		width: 100%;
 		padding: 0;
 		margin-bottom: 20px;
 		/* background-color: #2e363f; */
 	}
 	.event-hero-right {
 		display: block;
-		width: 80%;
+		width: 100%;
 
 		/* margin-right: 50px; */
 		padding-bottom: 200px;
